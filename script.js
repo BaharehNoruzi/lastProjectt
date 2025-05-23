@@ -27,6 +27,10 @@ let images = document.getElementsByClassName("imagetombnail");
 let fullnames = document.getElementsByClassName("fullname");
 let subjects = document.getElementsByClassName("subject");
 let bodies = document.getElementsByClassName("body");
+let imgAboveTheDesc = document.getElementById("email-pic");
+let subjectInfo = document.getElementById("subjectt");
+let dateOfSend = document.getElementById("dateOfSend");
+let desciription = document.getElementById("desc");
 
 
 for (let index = 0; index < images.length; index++) {
@@ -35,3 +39,15 @@ for (let index = 0; index < images.length; index++) {
     subjects[index].innerText = mails[index].subject;
     bodies[index].innerHTML = mails[index].body.substring(0, 60) + "...";
 }
+
+
+
+
+function showInformation(i) {
+    desciription.innerHTML = mails[i].body;
+    imgAboveTheDesc.src = mails[i].emailpic;
+    subjectInfo.innerHTML = mails[i].subject;
+    dateOfSend.innerHTML=mails[i].date;
+}
+
+showInformation(0);
