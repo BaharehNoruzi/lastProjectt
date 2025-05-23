@@ -3,3 +3,14 @@ button{
     border: none;
     padding: 10px;
 }
+hr{
+border-style: inset;
+}
+
+#newMessHover:hover{
+    background-color: black;
+}
+#inboxHover:hover{
+    background-color: #c0c0c0;
+    color: black;
+}
